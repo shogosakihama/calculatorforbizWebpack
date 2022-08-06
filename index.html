@@ -23,23 +23,20 @@
         
         function AlertSplitByComma() {
             // ▼出力用の変数
-            var RetSource = [];
+            var RetSource1 = [];
             // ▼テキスト入力欄に入力された文字列を得て、カンマ記号で分割して配列に得る
-            var resArray = document.getElementById('sampleCommaInput').value.split(",");
+            var resArray1 = document.getElementById('sampleCommaInput').value.split(",");
 
             // ▼配列1つ1つに対して処理
-            for (var i = 0; i < resArray.length; i++) {
-                RetSource.push(  resArray[i] );
-                console.log(RetSource);
+            for (var i = 0; i < resArray1.length; i++) {
+                RetSource1.push(  resArray1[i] );
+                console.log(RetSource1);
             }
-            // ▼アラートボックスに表示
-            
-        //}
 
 
         //比較したい配列
         //var arr1 = ['a', 'b', 'c', 'd', 'e'];
-        var arr1 = RetSource;
+        var arr1 = RetSource1;
         var arr2 = ['\'a\'', 'b', 'd', 'e'];
         var arr3 = ['b', 'c', 'z', 'z', 1];
 
