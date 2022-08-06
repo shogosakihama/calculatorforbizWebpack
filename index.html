@@ -12,8 +12,12 @@
 <body>
     <h1 id="title">title</h1>
     <p>
-        カンマ区切りで入力：
-        <input type="text" id="sampleCommaInput" value="">
+        <p>カンマ区切りで入力：</p>
+        <input type="text" id="sampleCommaInput1" value="">
+        <p></p>
+        <input type="text" id="sampleCommaInput2" value="">
+        <p></p>
+        <input type="text" id="sampleCommaInput3" value="">
     </p>
     <p>
         <input type="button" value="入力内容をカンマ区切りで分割" onclick="AlertSplitByComma();">
@@ -25,20 +29,43 @@
             // ▼出力用の変数
             var RetSource1 = [];
             // ▼テキスト入力欄に入力された文字列を得て、カンマ記号で分割して配列に得る
-            var resArray1 = document.getElementById('sampleCommaInput').value.split(",");
+            var resArray1 = document.getElementById('sampleCommaInput1').value.split(",");
+            if (resArray1 == "") {
+                resArray1 = [];
+            };
 
             // ▼配列1つ1つに対して処理
             for (var i = 0; i < resArray1.length; i++) {
                 RetSource1.push(  resArray1[i] );
-                console.log(RetSource1);
             }
 
 
-        //比較したい配列
-        //var arr1 = ['a', 'b', 'c', 'd', 'e'];
+            // ▼出力用の変数
+            var RetSource2 = [];
+            // ▼テキスト入力欄に入力された文字列を得て、カンマ記号で分割して配列に得る
+            var resArray2 = document.getElementById('sampleCommaInput2').value.split(",");
+
+            // ▼配列1つ1つに対して処理
+            for (var i = 0; i < resArray2.length; i++) {
+                RetSource2.push(  resArray2[i] );
+                console.log(RetSource2);
+            }
+
+
+            // ▼出力用の変数
+            var RetSource3 = [];
+            // ▼テキスト入力欄に入力された文字列を得て、カンマ記号で分割して配列に得る
+            var resArray3 = document.getElementById('sampleCommaInput3').value.split(",");
+
+            // ▼配列1つ1つに対して処理
+            for (var i = 0; i < resArray3.length; i++) {
+                RetSource3.push(  resArray3[i] );
+                console.log(RetSource3);
+            }
+
         var arr1 = RetSource1;
-        var arr2 = ['\'a\'', 'b', 'd', 'e'];
-        var arr3 = ['b', 'c', 'z', 'z', 1];
+        var arr2 = RetSource2;
+        var arr3 = RetSource3;
 
         //配列内の重複を削除
         arr1 = arr1.filter(function (x, i, self) {
@@ -54,7 +81,7 @@
         });
 
         //配列を1つにまとめる
-        var arrs = [arr1, arr2, arr3];
+        //var arrs = [arr1, arr2, arr3];
 
         var arrsCon = arr1.concat(arr2).concat(arr3);
 
