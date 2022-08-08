@@ -7,7 +7,7 @@ export default class GetTime {
       this.sec = this.now.getSeconds();
     }
   
-    // 現在時刻を表示
+    現在時刻を表示
     show() {
       alert(`${this.hour}時${this.min}分${this.sec}秒`);
     }
