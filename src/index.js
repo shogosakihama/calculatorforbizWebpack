@@ -1,13 +1,6 @@
 // getTime.jsをインポート
-import GetTime from './modules/getTime.js';
 import AlertSplitByComma from './modules/AlertSplitByComma.js';
 window.AlertSplitByComma = AlertSplitByComma;
-
-// getTime.jsに定義された機能を実行。
-const getTime = new GetTime();
-//getTime.show();
-console.log(getTime);
-
 
 // function AlertSplitByComma() {
 //     // ▼出力用の変数

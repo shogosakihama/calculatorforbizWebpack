@@ -1,5 +1,6 @@
 import RetSource from './RetSource.js';
 window.RetSource = RetSource;
+import DelDouble from './delDouble.js';
 export default class AlertSplitByComma {
     constructor() {
 
@@ -9,33 +10,18 @@ export default class AlertSplitByComma {
         let RetSource4 = new RetSource(input1);
         let RetSource5 = new RetSource(input2);
         let RetSource6 = new RetSource(input3);
-        var arr1 = RetSource4;
-        var arr2 = RetSource5;
-        var arr3 = RetSource6;
-
+    
         //配列内の重複を削除
-        arr1 = arr1.filter(function (x, i, self) {
-            return self.indexOf(x) === i;
-        });
+        RetSource4 = new DelDouble(RetSource4);
+        RetSource5 = new DelDouble(RetSource5);
+        RetSource6 = new DelDouble(RetSource6);
 
-        arr2 = arr2.filter(function (x, i, self) {
-            return self.indexOf(x) === i;
-        });
-
-        arr3 = arr3.filter(function (x, i, self) {
-            return self.indexOf(x) === i;
-        });
-
-        var arrsCon = arr1.concat(arr2).concat(arr3);
+        //要素を一つに
+        let arrsCon = RetSource4.concat(RetSource5).concat(RetSource6);
 
 
-
-
-        let arrx = arrsCon.filter(function (val, idx, arr) {
-            // 最初に見つかった位置と最後に見つかった位置が一緒であれば
-            return arr.indexOf(val) === arr.lastIndexOf(val);
-        });
-
+        let arrx = new DelDouble(arrsCon);
+      
         //文字列ならシングルクォーテーションを加える
         for (var i = 0, n = arrx.length; i < n; ++i) {
             if (isNaN(arrx[i])) {
@@ -44,26 +30,27 @@ export default class AlertSplitByComma {
         }
 
 
-        let arr1a = arr1.filter(function (val, idx, arrx) {
+        let RetSource4a = arrx.filter(function (val, idx, RetSource4) {
             // 最初に見つかった位置と最後に見つかった位置が一緒であれば
-            return arr1.indexOf(val) === arrx.indexOf(val);
+            return RetSource4.indexOf(val) === arrx.indexOf(val);
         });
+        console.log(RetSource4a);
 
 
-        let arr2a = arrx.filter(function (val, idx, arr2) {
+        let RetSource5a = arrx.filter(function (val, idx, RetSource5) {
             // 最初に見つかった位置と最後に見つかった位置が一緒であれば
-            return arr2.indexOf(val) === arrx.indexOf(val);
+            return RetSource5.indexOf(val) === arrx.indexOf(val);
         });
-        console.log("arr2: " + arr2a);
+        console.log("RetSource5: " + RetSource5a);
 
-        let arr3a = arrx.filter(function (val, idx, arr3) {
+        let RetSource6a = arrx.filter(function (val, idx, RetSource6) {
             // 最初に見つかった位置と最後に見つかった位置が一緒であれば
-            return arr3.indexOf(val) === arrx.indexOf(val);
+            return RetSource6.indexOf(val) === arrx.indexOf(val);
         });
-        console.log("arr3: " + arr3a);
+        console.log("RetSource6: " + RetSource6a);
 
         let h1 = document.getElementById("title");
-        h1.textContent = arr3a;
+        h1.textContent = arrx;
 
     }
 }
