@@ -1,6 +1,7 @@
 import RetSource from './RetSource.js';
 window.RetSource = RetSource;
 import DelDouble from './delDouble.js';
+import ShowDisplay from './showDisplay.js';
 export default class AlertSplitByComma {
     constructor() {
 
@@ -20,21 +21,22 @@ export default class AlertSplitByComma {
         let arrsCon = RetSource4.concat(RetSource5).concat(RetSource6);
 
 
-        let arrx = new DelDouble(arrsCon);
-      
-        //文字列ならシングルクォーテーションを加える
-        for (var i = 0, n = arrx.length; i < n; ++i) {
-            if (isNaN(arrx[i])) {
-                arrx[i] = "\'" + arrx[i] + "\'";
-            }
-        }
-
-
-        let RetSource4a = arrx.filter(function (val, idx, RetSource4) {
+        //重複しない値だけ残す。
+        let arrx = arrsCon.filter(function (val, idx, arr) {
             // 最初に見つかった位置と最後に見つかった位置が一緒であれば
-            return RetSource4.indexOf(val) === arrx.indexOf(val);
+            return arr.indexOf(val) === arr.lastIndexOf(val);
         });
-        console.log(RetSource4a);
+
+        //文字列ならシングルクォーテーションを加える
+        // for (var i = 0, n = arrx.length; i < n; ++i) {
+        //     if (isNaN(arrx[i])) {
+        //         arrx[i] = "\'" + arrx[i] + "\'";
+        //     }
+        // }
+
+
+        let showDisplay = new ShowDisplay(RetSource4,arrx);
+        console.log(showDisplay);
 
 
         let RetSource5a = arrx.filter(function (val, idx, RetSource5) {
