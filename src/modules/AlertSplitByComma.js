@@ -1,5 +1,8 @@
+import RetSource from './RetSource.js';
+window.RetSource = RetSource;
 export default class AlertSplitByComma {
     constructor() {
+        
         // ▼出力用の変数
         var RetSource1 = [];
         // ▼テキスト入力欄に入力された文字列を得て、カンマ記号で分割して配列に得る
@@ -12,6 +15,8 @@ export default class AlertSplitByComma {
         for (var i = 0; i < resArray1.length; i++) {
             RetSource1.push(resArray1[i]);
         }
+
+        
 
 
         // ▼出力用の変数
@@ -43,9 +48,15 @@ export default class AlertSplitByComma {
             console.log(RetSource3);
         }
 
-        var arr1 = RetSource1;
-        var arr2 = RetSource2;
-        var arr3 = RetSource3;
+        let input1 = 'sampleCommaInput1';
+        let input2 = 'sampleCommaInput2';
+        let input3 = 'sampleCommaInput3';
+        let RetSource4 = new RetSource(input1);
+        let RetSource5 = new RetSource(input2);
+        let RetSource6 = new RetSource(input3);
+        var arr1 = RetSource4;
+        var arr2 = RetSource5;
+        var arr3 = RetSource6;
 
         //配列内の重複を削除
         arr1 = arr1.filter(function (x, i, self) {
