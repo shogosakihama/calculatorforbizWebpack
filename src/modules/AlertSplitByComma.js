@@ -48,9 +48,9 @@ export default class AlertSplitByComma {
 
         let d1 = document.getElementById("showDisplay1").value = showDisplay1;
         d1.textContent = "⇒ " + showDisplay1;
-        let d2 = document.getElementById("showDisplay2");
+        let d2 = document.getElementById("showDisplay2").value = showDisplay2;
         d2.textContent = "⇒ " +  showDisplay2;
-        let d3 = document.getElementById("showDisplay3");
+        let d3 = document.getElementById("showDisplay3").value = showDisplay3;
         d3.textContent = "⇒ " +  showDisplay3;
 
     }
