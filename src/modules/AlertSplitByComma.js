@@ -45,7 +45,6 @@ export default class AlertSplitByComma {
         let h1 = document.getElementById("title");
         h1.textContent = arrx;
 
-
         let d1 = document.getElementById("showDisplay1").value = showDisplay1;
         d1.textContent = "⇒ " + showDisplay1;
         let d2 = document.getElementById("showDisplay2").value = showDisplay2;
