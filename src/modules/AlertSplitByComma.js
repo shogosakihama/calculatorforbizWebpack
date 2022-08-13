@@ -38,19 +38,13 @@ export default class AlertSplitByComma {
         let showDisplay1 = new ShowDisplay(RetSource4,arrx);
         let showDisplay2 = new ShowDisplay(RetSource5,arrx);
         let showDisplay3 = new ShowDisplay(RetSource6,arrx);
-        console.log(showDisplay1);
-        console.log(showDisplay2 );
-        console.log(showDisplay3 );
 
+        
         let h1 = document.getElementById("title");
         h1.textContent = arrx;
 
-        let d1 = document.getElementById("showDisplay1").value = showDisplay1;
-        d1.textContent = "⇒ " + showDisplay1;
-        let d2 = document.getElementById("showDisplay2").value = showDisplay2;
-        d2.textContent = "⇒ " +  showDisplay2;
-        let d3 = document.getElementById("showDisplay3").value = showDisplay3;
-        d3.textContent = "⇒ " +  showDisplay3;
-
+        document.getElementById("showDisplay1").value = showDisplay1;
+        document.getElementById("showDisplay2").value = showDisplay2;
+        document.getElementById("showDisplay3").value = showDisplay3;
     }
 }
