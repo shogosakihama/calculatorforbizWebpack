@@ -8,24 +8,35 @@
     <script type="module"  src="../src/index.js"></script>
     <title>Document</title>
 
-</head>
-
-<body>
+</head><body>
     <h1 id="title">title</h1>
     <p>
-        <p>カンマ区切りで入力：</p>
-        <input type="text" id="sampleCommaInput1" value="">
-        <p id="display1">⇒</p>
-        <input type="text" id="sampleCommaInput2" value="">
-        <p></p>
-        <input type="text" id="sampleCommaInput3" value="">
+    <p>配列1~3を比較して、仲間外れの値を表示します</p>
+    <p>カンマ区切りで入力：</p>
+    <p>
+        <tr>
+            <td> 配列1 </td><input type="text" id="sampleCommaInput1" value="">
+            <td> 抽出⇒ </td>
+            <input id="showDisplay1" value="" style="background-color: rgb(240, 240, 240); border:2px solid rgb(240, 240, 240)"></input>
+        </tr>
     </p>
+    <tr>
+        <td> 配列2 </td><input type="text" id="sampleCommaInput2" value="">
+        <td> 抽出⇒ </td>
+        <input id="showDisplay2" value="" style="background-color: rgb(240, 240, 240); border:2px solid rgb(240, 240, 240)"></input>
+    </tr>
+    <p>
+        <tr>
+            <td> 配列3 </td><input type="text" id="sampleCommaInput3" value="">
+            <td> 抽出⇒ </td>
+            <input id="showDisplay3" value="" style="background-color: rgb(240, 240, 240); border:2px solid rgb(240, 240, 240)"></input>
+        </tr>
+    </p>
+
     <p>
         <input type="button" value="入力内容をカンマ区切りで分割" onclick="new AlertSplitByComma()">
     </p>
-    
     <script>
-        
        
 
     </script>
