@@ -18,19 +18,21 @@
             <td> 配列1 </td><input type="text" id="sampleCommaInput1" value="">
             <td> 抽出⇒ </td>
             <input id="showDisplay1" value="" style="background-color: rgb(240, 240, 240); border:2px solid rgb(240, 240, 240)"></input>
-            <button onclick="new CopyToClipboard()">Copy text</button>
+            <button onclick="new CopyToClipboard(url1)">Copy text</button>
         </tr>
     </p>
     <tr>
         <td> 配列2 </td><input type="text" id="sampleCommaInput2" value="">
         <td> 抽出⇒ </td>
         <input id="showDisplay2" value="" style="background-color: rgb(240, 240, 240); border:2px solid rgb(240, 240, 240)"></input>
+        <button onclick="new CopyToClipboard(url2)">Copy text</button>
     </tr>
     <p>
         <tr>
             <td> 配列3 </td><input type="text" id="sampleCommaInput3" value="">
             <td> 抽出⇒ </td>
             <input id="showDisplay3" value="" style="background-color: rgb(240, 240, 240); border:2px solid rgb(240, 240, 240)"></input>
+            <button onclick="new CopyToClipboard(url3)">Copy text</button>
         </tr>
     </p>
 
@@ -38,7 +40,9 @@
         <input type="button" value="入力内容をカンマ区切りで分割" onclick="new AlertSplitByComma()">
     </p>
     <script>
-       
+       let url1 = "showDisplay1";
+       let url2 = "showDisplay2";
+       let url3 = "showDisplay3";
 
     </script>
 </body>

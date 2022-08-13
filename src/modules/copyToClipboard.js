@@ -1,7 +1,7 @@
 export default class copyToClipboard {
-    constructor(){
+    constructor(url){
        // コピー対象をJavaScript上で変数として定義する
-       var copyTarget = document.getElementById("showDisplay1");
+       var copyTarget = document.getElementById(url);
 
        // コピー対象のテキストを選択する
        copyTarget.select();
