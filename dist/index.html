@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module"  src="../src/index.js"></script>
-    <title>Document</title>
+    <title>utility</title>
 
 </head><body>
-    <h1 id="title">title</h1>
+    <h1 id="title">全体チェック</h1>
     <p>
     <p>配列1~3を比較して、仲間外れの値を表示します</p>
     <p>カンマ区切りで入力：</p>
@@ -17,35 +17,51 @@
         <tr>
             <td> 配列1 </td><input type="text" id="sampleCommaInput1" value="">
             <td> 抽出⇒ </td>
-            <input id="showDisplay1" value="" style="background-color: rgb(240, 240, 240); border:2px solid rgb(240, 240, 240)"></input>
+            <input id="showDisplay1" size="50" value="" style="background-color: rgb(240, 240, 240); border:2px solid rgb(240, 240, 240)"></input>
             <button onclick="new CopyToClipboard(url1)">Copy text</button>
         </tr>
     </p>
     <tr>
         <td> 配列2 </td><input type="text" id="sampleCommaInput2" value="">
         <td> 抽出⇒ </td>
-        <input id="showDisplay2" value="" style="background-color: rgb(240, 240, 240); border:2px solid rgb(240, 240, 240)"></input>
+        <input id="showDisplay2" size="50" value="" style="background-color: rgb(240, 240, 240); border:2px solid rgb(240, 240, 240)"></input>
         <button onclick="new CopyToClipboard(url2)">Copy text</button>
     </tr>
     <p>
         <tr>
             <td> 配列3 </td><input type="text" id="sampleCommaInput3" value="">
             <td> 抽出⇒ </td>
-            <input id="showDisplay3" value="" style="background-color: rgb(240, 240, 240); border:2px solid rgb(240, 240, 240)"></input>
+            <input id="showDisplay3" size="50" value=""
+                style="background-color: rgb(240, 240, 240); border:2px solid rgb(240, 240, 240)"></input>
             <button onclick="new CopyToClipboard(url3)">Copy text</button>
-        </tr>
-    </p>
+            </tr>
+            </p>
+            
+            <tr>
+                <td><input type="button" value="入力内容をカンマ区切りで分割" onclick="new AlertSplitByComma()"></td>
+                <td><input type="button" value="入力内容をシングルクォーテーションで囲む" onclick="new ChangeToStr(url)"></td>
+            </tr>
+            <p>
+                <tr>今日の日付
+                    <input id="showDisplay5" size="50" value=""
+                        style="background-color: rgb(240, 240, 240); border:2px solid rgb(240, 240, 240)"></input>
+                </tr>
+                <button onclick="new CopyToClipboard(url5)">Copy text</button>
+            </p>
 
-    <tr>
-        <td><input type="button" value="入力内容をカンマ区切りで分割" onclick="new AlertSplitByComma()"></td>
-        <td><input type="button" value="入力内容をシングルクォーテーションで囲む" onclick="new ChangeToStr(url)"></td>
-    </tr>
-    <script>
-       let url1 = "showDisplay1";
-       let url2 = "showDisplay2";
-       let url3 = "showDisplay3";
-       let url = [];
-       url.push(url1, url2,url3);
+
+            <script>
+                let url1 = "showDisplay1";
+                let url2 = "showDisplay2";
+                let url3 = "showDisplay3";
+                let url5 = "showDisplay5";
+                let url = [];
+                url.push(url1, url2, url3);
+
+                window.onload = function () {
+                    new DateToDot(new Date(), 'YYYY.MM.DD', 'showDisplay5');
+                }
+
 
     </script>
 </body>
