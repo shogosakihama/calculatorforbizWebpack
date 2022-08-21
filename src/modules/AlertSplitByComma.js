@@ -2,6 +2,7 @@ import RetSource from './RetSource.js';
 window.RetSource = RetSource;
 import DelDouble from './delDouble.js';
 import ShowDisplay from './showDisplay.js';
+import Tandem from './tandem.js';
 export default class AlertSplitByComma {
     constructor() {
 

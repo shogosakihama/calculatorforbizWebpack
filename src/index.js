@@ -8,3 +8,4 @@ window.ChangeToStr = ChangeToStr;
 import DateToDot from './modules/dateToDot.js';
 window.DateToDot = DateToDot;
 
+
