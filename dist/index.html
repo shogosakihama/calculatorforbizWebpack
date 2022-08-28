@@ -42,6 +42,11 @@
                 <td><input type="button" value="入力内容をカンマ区切りで分割" onclick="new AlertSplitByComma()"></td>
                 <td><input type="button" value="入力内容をシングルクォーテーションで囲む" onclick="new ChangeToStr(url)"></td>
             </tr>
+            <div>
+               <div class="list"><ul id="sample"></ul></div>
+               <div class="list"><ul id="sample2"></ul></div>
+               <div class="list"><ul id="sample3"></ul></div>
+            </div>
             <p>
                 <tr>今日の日付
                     <input id="showDisplay5" size="50" value=""
@@ -49,6 +54,15 @@
                 </tr>
                 <button onclick="new CopyToClipboard(url5)">Copy text</button>
             </p>
+
+            <style>
+                ul {
+                    display: inline-block;vertical-align: top;list-style: none;
+                }
+                div.list {
+                    display: inline-block;vertical-align: top;list-style: none;
+                }
+            </style>
 
 
             <script>

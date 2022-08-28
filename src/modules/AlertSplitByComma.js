@@ -47,5 +47,11 @@ export default class AlertSplitByComma {
         document.getElementById("showDisplay1").value = showDisplay1;
         document.getElementById("showDisplay2").value = showDisplay2;
         document.getElementById("showDisplay3").value = showDisplay3;
+
+        let showDisplay = [];
+        showDisplay.push(showDisplay1,showDisplay2,showDisplay3);
+        new Tandem(showDisplay1,"sample");
+        new Tandem(showDisplay2,"sample2");
+        new Tandem(showDisplay3,"sample3");
     }
 }
