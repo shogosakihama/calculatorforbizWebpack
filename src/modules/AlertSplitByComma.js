@@ -3,6 +3,7 @@ window.RetSource = RetSource;
 import DelDouble from './delDouble.js';
 import ShowDisplay from './showDisplay.js';
 import Tandem from './tandem.js';
+import InsertNull from './insertNull.js';
 export default class AlertSplitByComma {
     constructor() {
 
@@ -35,6 +36,7 @@ export default class AlertSplitByComma {
         //     }
         // }
 
+        
 
         let showDisplay1 = new ShowDisplay(RetSource4,arrx);
         let showDisplay2 = new ShowDisplay(RetSource5,arrx);
@@ -50,6 +52,9 @@ export default class AlertSplitByComma {
 
         let showDisplay = [];
         showDisplay.push(showDisplay1,showDisplay2,showDisplay3);
+        new InsertNull(RetSource4,arrx);
+        new InsertNull(RetSource5,arrx);
+        new InsertNull(RetSource6,arrx);
         new Tandem(showDisplay1,"sample");
         new Tandem(showDisplay2,"sample2");
         new Tandem(showDisplay3,"sample3");
